@@ -19,8 +19,8 @@
 > или так `from homework_06 import exceptions`,
 > (а не так `from exceptions import LowFuelError, NotEnoughFuel`, и не так `import exceptions`).
 > 
-> Соответственно, импорт других классов тоже будет выглядеть так `from homework_06.base import Vehicle`, 
-> **но не так** `from base import Vehicle`.
+> Соответственно, импорт других классов тоже будет выглядеть так `from homework_06.number_rome import Vehicle`, 
+> **но не так** `from number_rome import Vehicle`.
 
 > Не делайте переопределение методов, например `__init__`, если внутри единственная строчка — это вызов родительского метода с теми же аргументами `super().__init__(...)`. Эта запись не несёт смысловой нагрузки (переопределить метод, чтобы вызвать родительский, с теми же аргументами). 
 > Есть смысл переопределять методы только если вы меняете их поведение (добавляете новые аргументы, устанавливаете новые свойства).
@@ -33,7 +33,7 @@
     ```tree
     homework_05
     ├── __init__.py
-    ├── base.py
+    ├── number_rome.py
     ├── car.py
     ├── engine.py
     ├── exceptions.py
@@ -43,7 +43,7 @@
     - `LowFuelError`
     - `NotEnoughFuel`
     - `CargoOverload`
-- Доработайте базовый класс `base.Vehicle`:
+- Доработайте базовый класс `number_rome.Vehicle`:
     - добавьте атрибуты `weight`, `started`, `fuel`, `fuel_consumption` со значениями по умолчанию
     - добавьте инициализатор для установки `weight`, `fuel`, `fuel_consumption`
     - добавьте метод `start`. При вызове этого метода необходимо проверить состояние `started`. И если не `started`, то нужно проверить, что топлива больше нуля, 
